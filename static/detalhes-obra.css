@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: black;
+}
+
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+section #descricao_obra{
+    display: flex;
+    width: 60rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+section #descricao_obra h1{
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+}
+
+section #descricao_obra p{
+    padding: 1rem;
+}
+
+section #descricao_obra h4{
+    margin-left: 1rem;
+}
+
+section #descricao_obra a{
+    margin-left: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem auto;
+    width: 20rem;
+}
+
+form label{
+    margin-top: 0.5rem;
+}
+
+form button{
+    width: 6rem;
+    margin: 0.5rem auto;
+}
+
+.comentario h2{
+    text-align: center;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    width: 60rem;
+    margin: 0rem auto 0 auto;
+}
+
+.comentario a:hover{
+    background-color: black;
+    color: white;
+    width: 8rem;
+    padding: 0.2rem;
+    margin: auto;
+    transition-duration: 0.2s;
+    border-radius: 0.5cm;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    margin-top: 3rem;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes-artistas.css') }}">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>{{ artista.get_nome() }}</h1>
+        <section class="foto_descricao">
+            <div id="foto">
+                <img src="{{ artista.get_foto() }}" alt="" width="300px">
+            </div>
+            <div id="descricao_autor">
+                <h1>Descrição do Autor:</h1>
+                <p>{{ artista.get_descricao() }}</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="obras_por_artistas">
+            <h2>Obras Criadas por {{ artista.get_nome() }}</h2>
+                <div id="titulo_foto">
+                    {% for obra in obra_artista_list %}
+                        <a href="{{ url_for('detalhes_obra', id=obra.get_id()) }}"><img src="{{ obra.get_foto() }}" alt=""></a>
+                    {% endfor %}
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <h5>₢ Todos os direitos reservados</h5>
+    </footer>
+
+</body>
+</html>

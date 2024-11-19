@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+}
+
+header .foto_descricao{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+header #descricao_autor h1{
+    padding: 1rem;
+    background-color: grey;
+    color: white;
+    text-align: left;
+}
+
+header #descricao_autor p{
+    padding: 1rem;
+    font-size: 14pt;
+}
+
+#titulo_foto{
+    text-align: center;
+    display: flex;
+    background-image: url(https://dcdn.mitiendanube.com/stores/001/094/486/products/7000-d4fe12b95e8b00717017029199234817-1024-1024.jpg);
+}
+
+.obras_por_artistas{
+    width: 80%;
+    margin: auto;
+}
+
+.obras_por_artistas h2{
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    width: 5
+    80%;
+    margin: auto;
+}
+
+.obras_por_artistas img{
+    width: 80%;
+    padding: 0.7rem;
+    align-items: center;
+}
+
+#titulo_foto{
+    align-items: center;
+}
+
+#titulo_foto h3{
+    margin-top: 2rem;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

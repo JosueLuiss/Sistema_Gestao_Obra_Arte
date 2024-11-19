@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes-comentario.css') }}">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+</head>
+<body>
+
+    <header>
+        <h1>Detalhes do Comentário:</h1>
+    </header>
+
+    <main>
+        <h1>FeedBack da Obra:</h1>
+        <section class="detalhes-obra">
+            <p>{{ comentario_obra.get_comentario() }}</p>
+            <h4>Nome: {{ comentario_obra.get_nome_usuario() }}</h4>
+            <h4>Data de publicação: {{ comentario_obra.get_data() }}</h4>
+        </section>
+
+        <section>
+            <h1>Adicione um novo comentário:</h1>
+            <form>
+                <label for="nome-usuario">Nome usuário:</label>
+                <input type="text" name="nome-usuario" id="nome-usuario">
+                <label for="comentario">Comentário:</label>
+                <input type="text" name="comentario" id="comentario">
+                <label for="data">Data:</label>
+                <input type="text" name="data" id="data">
+                <input type="button" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer><h5>₢ Todos os direitos reservados</h5></footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestão de Inventário de Obras de Arte</h1>
+        <menu>
+            <h4><a href="{{ url_for('exibicoes') }}">Exibições</a></h4>
+            <h4><a href="{{ url_for('leiloes') }}">Leilões</a></h4>
+        </menu>
+    </header>
+    
+    <main>
+        <section class="seis_recentes">
+            <h2>As 6 Obras de Arte mais recentes:</h2>
+            <div id="seis_recentes">
+                {% for obra in seis_recentes %}
+                    <div class="obra-item">
+                        <h3>{{ obra.titulo }}  -  <strong>{{ obra.ano }}</strong></h3>
+                        <img src="{{ obra.foto }}" alt="{{ obra.nome }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </section>      
+
+        <section class="tres_recentes_por_categoria">
+            <h1>Categorias:</h1>
+            {% for categoria in categoria_list %}
+                <details>
+                    <summary>{{ categoria.get_nome() }}</summary>
+                    {% for chave in ultimas_obras %}
+                        {% for obra in chave %}
+                            {% if obra.get_categoria() == categoria.get_id() %}
+                                <h4>{{ obra.get_titulo() }}</h4>
+                                <img src="{{ obra.get_foto() }}" alt="" width="300px">
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </details>
+            {% endfor %}
+        </section>
+
+
+        <section class="artistas_cadastrados">
+            <h2>Artistas Cadastrados:</h2>
+            <div id="artistas_cadastrados">
+                {% for artista in artistas_list %}
+                    <section class="artista">
+                        <div id="foto">
+                            <img src="{{ artista.get_foto() }}" alt="{{ artista.get_nome() }}">
+                        </div>
+                        <div id="nome_descricao">
+                            <h3><a href="{{ url_for('detalhes_artistas', id=artista.get_id()) }}">{{ artista.get_nome() }}</a></h3>
+                            <p>{{ artista.get_descricao() }}</p>
+                        </div>
+                    </section>
+                {% endfor %}
+            </div>     
+        </section>
+    </main>
+
+    <footer>₢ Todos os direitos reservados</footer>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='leiloes.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1>Leilões</h1>
+    </header>
+    
+    <main>
+        <h2>Confira abaixo as obras em leilão:</h2>
+        <section class="leilao">
+            {% for obra_leilao in obra_leilao %}
+                {% for leilao in dados_leilao %}
+                    {% if obra_leilao.get_id() == leilao.get_id_obra() %}
+                        <div>
+                            <h3>{{ obra_leilao.get_titulo() }}</h3>
+                            <a href="{{ url_for('detalhes_obra', id=obra_leilao.get_id()) }}"><div><img src="{{ obra_leilao.get_foto() }}" alt='Foto da obra "{{ obra_leilao.get_titulo() }}'></div></a>
+                            <p><strong>Lance inicial:</strong> ${{ leilao.get_lance_inicial() }}</p>
+                            <p><strong>Data de encerramento:</strong> {{ leilao.get_data_encerramento() }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer><h5>₢ Todos os direitos reservados</h5></footer>
+
+
+</body>
+</html>

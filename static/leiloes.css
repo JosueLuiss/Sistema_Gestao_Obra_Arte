@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+main h2{
+    text-align: center;
+    padding: 2rem;
+}
+
+div{
+    text-align: center;
+}
+
+div h3{
+    margin-top: 4rem;
+}
+
+footer{
+    text-align: center;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+}

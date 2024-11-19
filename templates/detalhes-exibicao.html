@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes-exibicao.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1>Detalhes da Exibição</h1>
+    </header>
+    
+        <section class="exibicao">
+            <h2>{{ exibicao.get_titulo() }}</h2>
+            <p>Início: {{ exibicao.get_data_inicio() }}</p>
+            <p>Término: {{ exibicao.get_data_termino() }}</p>
+            <p>Curador responsável: {{ exibicao.get_curador() }}</p>
+            <p>Local: {{ exibicao.get_local() }}</p>
+        </section>
+
+        <section class="conferir_obra">
+            <h2>Confira abaixo as obras de arte participantes:</h2>
+            {% for obra_exibicao in obras_exibicao %}
+                <a href="{{ url_for('detalhes_obra', id=obra_exibicao.get_id()) }}"><div><img src="{{ obra_exibicao.get_foto() }}" alt='Foto da obra "{{ obra_exibicao.get_titulo() }}"'></div></a>
+            {% endfor %}
+        </section>
+
+        <footer><h5>₢ Todos os direitos reservados</h5></footer>
+
+</body>
+</html>

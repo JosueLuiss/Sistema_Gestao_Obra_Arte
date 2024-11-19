@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.leilao_exibicao a{
+    color: black;
+}
+
+#nome_descricao a{
+    color: white;
+}
+
+header{
+    text-align: center;
+    padding: 2rem;
+    background-color:rgba(0, 0, 0, 0.562);
+    color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1{
+    margin-left: 240px;
+}
+
+header menu{
+    display: flex;
+}
+
+header a{
+    padding: 1rem;
+    color: black;
+    border-radius: 01cm;
+    font-weight: bolder;
+}
+
+header a:hover{
+    background-color: black;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.seis_recentes h2{
+    padding: 2rem;
+    text-align: center;
+    font-weight: bolde;
+}
+
+section #seis_recentes{
+    text-align: center;
+}
+
+section #seis_recentes h3{
+    margin-top: 4rem;
+}
+
+section #seis_recentes img{
+    margin: 1rem 0 0rem 0 ;
+    width: 40%;
+    padding: 1rem;
+    box-shadow: 0 0 20px blue;
+    background-color: black;
+    border-radius: 2rem;
+}
+
+section #seis_recentes{
+    background-image: url(https://img.freepik.com/fotos-gratis/parede-de-tijolo-preto-texturizado-fundo_53876-63572.jpg);
+    background-position: center;
+    color: white;
+    padding-bottom: 3rem;
+    padding-top: 0.1rem;
+}
+
+.tres_recentes_por_categoria h1{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.tres_recentes_por_categoria details{
+    text-align: center;
+    cursor: pointer;
+}
+
+.tres_recentes_por_categoria summary{
+    padding: 0.5rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.tres_recentes_por_categoria summary:hover{
+    background-color: black;
+    color: white;
+    width: 100px;
+    transition: calc(0.3s);
+    margin: auto;
+}
+
+.artistas_cadastrados h2{
+    text-align: center;
+    padding: 3rem;
+}
+
+#artistas_cadastrados img{
+    width: 40%;
+}
+
+section .artista{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    margin: auto;
+}
+
+section #foto img{
+    width: 250px;
+    margin-left: 8.3rem;
+    margin-bottom: 5rem;
+}
+
+section #nome_descricao p{
+    width: 50rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+section #nome_descricao h3{
+    background-color:black;
+    padding: 1.5rem 0.5rem;
+    color: white;
+    width: 50rem;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

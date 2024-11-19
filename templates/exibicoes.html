@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='exibicoes.css') }}">
+</head>
+<body>
+    
+    <header>
+        <h1>Exibições</h1>
+    </header>
+    
+    <main>
+        <h1>Obras em exibição:</h1>
+        <section>
+            {% for exibicao in exibicoes_list %}
+                <a href="{{ url_for('detalhes_exibicao', id=exibicao.get_id()) }}">
+                    <div>
+                        <h2>{{ exibicao.get_titulo() }}</h2>
+                        <p>Início: {{ exibicao.get_data_inicio() }}</p>
+                        <p>Término: {{ exibicao.get_data_termino() }}</p>
+                        <p>Local: {{ exibicao.get_local() }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer><h5>₢ Todos os direitos reservados</h5></footer>
+
+</body>
+</html>

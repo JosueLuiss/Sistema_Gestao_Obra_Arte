@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='detalhes-obra.css') }}">
+    <title>Sistema de Gestão de Inventário de Obras de Arte</title>
+</head>
+<body>
+
+    <header>
+        <h1>Detalhes da Obra</h1>
+    </header>
+
+    <main>
+        <section class="descricao_obra">
+            <div id="descricao_obra">
+                <div id="foto">
+                    <img src="{{ obra.get_foto() }}" alt='Foto da obra "{{ obra.get_titulo() }}"'>
+                </div>
+                <div id="titulo_descricao_categoria_ano_autor">
+                    <h1>{{ obra.get_titulo() }}</h1>
+                    <p>{{ obra.get_descricao() }}</p>
+                    <h4><strong>Categoria:</strong> {{ categoria_obra.get_nome() }}</h4>
+                    <h4><strong>Ano:</strong> {{ obra.get_ano() }}</h4>
+                    <a href="#"><strong>Autor:</strong> {{ obra.get_autor() }}</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="comentario">
+                <h2>Deixe seu feedback:</h2>
+
+                <form action="/mensagem-enviada" method="post">
+                    <label for="usuario">Nome completo:</label>
+                    <input type="text" name="usuario" id="usuario">
+                    <label for="comentario">Comentário/Mensagem:</label>
+                    <input type="text" name="comentario" id="comentario">
+                    <button type="submit">Enviar</button>
+                    <a href="{{ url_for('detalhes_comentario', id=obra.get_id()) }}">Ver detalhes</a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h5>₢ Todos os direitos reservados</h5>
+    </footer>
+
+</body>
+</html>

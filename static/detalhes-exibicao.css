@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.exibicao{
+    text-align: center;
+    margin: 4rem;
+}
+
+.conferir_obra{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.conferir_obra img{
+    margin-top: 3rem;
+}
+
+footer{
+    text-align: center;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+}
