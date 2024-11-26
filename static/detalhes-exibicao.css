@@ -20,7 +20,11 @@ header{
 
 .exibicao{
     text-align: center;
-    margin: 4rem;
+    margin: 4rem auto;
+    box-shadow: 0 0 10px black;
+    border-radius: 1cm;
+    width: 450px;
+    padding: 2rem;
 }
 
 .conferir_obra{
@@ -30,6 +34,11 @@ header{
 
 .conferir_obra img{
     margin-top: 3rem;
+    background-image: url(https://http2.mlstatic.com/D_NQ_NP_845772-MLB50624472767_072022-O.webp);
+}
+
+.conferir_obra a{
+    background-image: url(https://http2.mlstatic.com/D_NQ_NP_845772-MLB50624472767_072022-O.webp);
 }
 
 footer{
